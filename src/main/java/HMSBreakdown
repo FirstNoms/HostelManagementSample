@@ -1,0 +1,21 @@
+HMS ERD/Class Diagram flow.
+
+HMS
+ |->Student
+    |->firstName
+    |->lastName
+    |->matricNumber
+    |->userName
+    |->password
+    |->BedSpace(<-|has A)
+
+ |->Hostel
+   |->Name
+   |->Id
+   |->Rooms[]  //arrays because there's a fixed number of rooms in a hostel
+     |->hostelId
+     |->roomId
+     |->BedSpaces[]//arrays because there's a fixed number of bedSpaces in a room
+       |->roomId
+       |->bedSpace Id(primary key)
+       |->boolean(isEmpty)
